@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>EGO</title>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1200"/>
+    <meta http-equiv="X-UA-Compatible" content="IT=edge,chrome=IE8"/>
+    <link href="script/odds.css?modified=20190314" type="text/css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="script/jquery-my.min.js"></script>
+    <script type="text/javascript" src="script/jsodds.js"></script>
+    <script type="text/javascript" src="script/oddstableM1Sim.js"></script>
+
+    <!-- <script type="text/javascript" src="script/jsodds.js?modified=20190314"></script> -->
+    <!-- <script type="text/javascript" src="script/oddstableM1Sim.js?modified=20190314"></script> -->
+
+    <script type="text/javascript">
+      /*================================================================ Resources Begin ===================================================================*/
+      var ot = "t";
+      var oview = "3";
+      var PreC = "EN-US";
+      var C_Mcl = ['#f5eeb8', '#d6d6d6', '#f5f5f5', '#FFDDD2', '#FFCCBC'];
+      var RS_LangClass = "";
+      var RS_LangCol = "";
+
+      var RS_TodayEvents = "Today Events";
+      var RS_Early = "Early";
+      var RS_SortbyLeague = "Sort by League";
+      var RS_SortbyTime = "Sort by Time";
+      var RS_SelectLeague2 = "Select League";
+      var RS_Odds_DoubleLine1 = "Double Line 1";
+      var RS_Odds_DoubleLine2 = "Double Line 2";
+      var RS_Odds_SingleLine = "Single Line";
+      var RS_Odds_Simple = "Simple";
+      var RS_btnRefresh = "Refresh";
+
+      var RS_FirstHalf2 = "First Half";
+      var RS_Running = "Running";
+      var RS_Odds_Time = "Time";
+      var RS_Event = "Event";
+      var RS_Odds_FTHDP = "FT. HDP";
+
+      var RS_HOME = "HOME";
+      var RS_AWAY = "AWAY";
+      var RS_Odds_FTOU = "FT. O/U";
+      var RS_Odds_OVER = "OVER";
+      var RS_Odds_UNDER = "UNDER";
+      var RS_Odds_1HOU = "1H. O/U";
+      var RS_Odds_1HHDP = "1H. HDP";
+
+      var RS_Page = "Page";
+      var RS_LIVE2 = "LIVE";
+      var RS_HTIME = "H.TIME";
+      var RS_NoEvents = "No events available for this market.";
+
+      var RS_LargeView = "Large View";
+      var RS_SideView = "Side View";
+
+      var RS_Odds_Time_2 = "Time";
+      var RS_Event_2 = "Event";
+      var RS_Odds_FTHDP_2 = "FT. HDP";
+      var RS_Odds_FTOU_2 = "FT. O/U";
+      var RS_Odds_1HHDP_2 = "1H. HDP";
+      var RS_Odds_1HOU_2 = "1H. O/U";
+      var RS_Odds_OVER_2 = "OVER";
+      var RS_Odds_UNDER_2 = "UNDER";
+      var RS_HOME_2 = "HOME";
+      var RS_AWAY_2 = "AWAY";
+      /*================================================================ Resources End ===================================================================*/
+      /*================================================================ Account Begin =================================================================*/
+      var ACC_UserName = "@@@IGK33###";
+      var ACC_SortBy = "0";
+      var ACC_PageType = "0";
+      var ACC_AccType = "MY";
+      var ACC_TeamView = "0";
+      var ACC_PreferedCulture = "EN-US";
+      /*================================================================ Account End ===================================================================*/
+      /*================================================================ Config Begin ======================================================================*/
+      var CFG_CompType = "1";
+      var CFG_StatsPath = "http://stats.gvbet.com/Stat";
+      var CFG_AppPath = "http://www.gvbet.com";
+      /*================================================================ Config End ========================================================================*/
+      /*================================================================ Special Var Begin =================================================================*/
+      var UTL_isGuest = "True";
+      /*================================================================ Special Var End ===================================================================*/
+
+      //Hide the selection when click in browser anywhere
+      $(document).mouseup(function (e) {
+        var container = $(".OddsSel");
+        var outerContainer = $(".divOddsSel");
+
+        //if the target of the click isn't the container nor a descendant of the container
+        if ((!container.is(e.target) && container.has(e.target).length == 0) && (!outerContainer.is(e.target) && outerContainer.has(e.target).length == 0)) 
+          container.hide();
+        else if (outerContainer.is(e.target) || outerContainer.has(e.target).length != 0) 
+          $(e.target).closest(".divOddsSel").siblings().find(".OddsSel").hide();
+        }
+      );
+    </script>
+
+    <script language='javascript'>
+      timerRun('http://www.gvbet.net/_view/MOdds1Gen.ashx?ot=r&sort=0&oview=3&at=MY&r=531083278', 25, 25);
+      timerToday('http://www.gvbet.net/_view/MOdds1Gen.ashx?ot=t&wd=&ia=0&sort=0&oview=3&at=MY&r=531083278', 40, 40);
+      ajaxRun('http://www.gvbet.net/_view/MOdds1Gen.ashx?ot=r&sort=0&oview=3&at=MY&r=531083278', 25);
+      ajaxToday('http://www.gvbet.net/_view/MOdds1Gen.ashx?ot=t&wd=&ia=0&sort=0&oview=3&at=MY&r=531083278', 40);
+    </script>
+  </head>
+  <body style="margin-left:0; margin-right:0; margin-top:0;" class="Background " onload="adjustContentWidth(0, 1)">
+    <form method="post" action="http://www.gvbet.net/_view/MOdds1Sim.aspx?ot=t&amp;oview=3" id="form1">
+      <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY1MDAwMjI1N2RkZYLH73vlL5VOL2pM/4RQGrNV7arPY8e+KOzim85RoYY="/>
+      </div>
+
+      <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4E9927B0"/>
+      </div>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr style="height:5px">
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td style="width:2px;"></td>
+          <td>
+            <table cellspacing="0" cellpadding="0" width="775px" align="left" border="0" height="100%">
+              <tr>
+                <td valign="top" height="100%">
+                  <div id="tableRun"></div>
+                  <div id="tableSeparator" style="height:20px; display:none;"></div>
+                  <div id="tableToday"></div>
+                  <div id="spinner" class="movable"></div>
+
+                  <div class="morebets" id="_MoreBets" style="DISPLAY: none; TOP: 0px; overflow:hidden" name="_MoreBets">
+                    <iframe id="_iMoreBets" name="_iMoreBets" src="" frameborder="0" width="760" scrolling="no" height="0"></iframe>
+                  </div>
+                  <div class="morebets" id="_SelectLeague" style="DISPLAY: none; TOP: 0px; overflow:hidden" name="_SelectLeague">
+                    <iframe id="_iSelectLeague" name="_iSelectLeague" src="" frameborder="0" width="650" scrolling="no" height="0"></iframe>
+                  </div>
+                  <div class="morebets" id="_Setting" style="DISPLAY: none; TOP: 0px; overflow:hidden" name="_Setting">
+                    <iframe id="_iSetting" name="_iSetting" src="" frameborder="0" width="450px" scrolling="no" height="0px"></iframe>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
